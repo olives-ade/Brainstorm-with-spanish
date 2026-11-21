@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7e8df">
+  <meta name="description" content="Learn Spanish across six CEFR levels, from A1 beginner to C2 proficiency, and take a graded 60-question exam.">
+  <title>Hola — Your Spanish journey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Hola home"><span class="brand-icon" aria-hidden="true">h</span> hola<span class="brand-period">.</span></a>
+    <div class="topbar-note"><span class="status-dot" aria-hidden="true"></span> Your little corner of Spanish</div>
+    <div class="progress-pill" id="progress-pill" role="status" aria-live="polite">Exam not taken</div>
+  </header>
+
+  <main class="page-shell">
+    <section class="welcome" aria-labelledby="welcome-title">
+      <div class="welcome-copy">
+        <p class="eyebrow"><span aria-hidden="true">✳</span> A language-learning adventure</p>
+        <h1 id="welcome-title">A little Spanish,<br><span>a lot of possibility.</span></h1>
+        <p class="welcome-description">Start with hola, stay for the conversations. Find your level, learn something new, and take an exam when you’re ready.</p>
+        <a class="start-link" href="#course">Let’s get started <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="welcome-art" aria-label="Illustration of the Spanish sun and a potted plant" role="img">
+        <div class="sun"></div>
+        <span class="art-spark spark-one">✳</span>
+        <span class="art-spark spark-two">✦</span>
+        <div class="art-caption"><span>hola,</span><br>you’ve got this.</div>
+        <div class="plant-pot"><div class="plant-leaf leaf-one"></div><div class="plant-leaf leaf-two"></div><div class="plant-leaf leaf-three"></div><div class="plant-stem"></div></div>
+      </div>
+    </section>
+
+    <section class="course-section" id="course" aria-labelledby="course-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR LEARNING PATH</p>
+          <h2 id="course-title">Six levels to <span>¡hablar!</span></h2>
+        </div>
+        <p class="section-hint">Explore the curriculum at each level.<br>Then take the 60-question exam.</p>
+      </div>
+
+      <nav class="level-picker" id="level-picker" aria-label="Choose a Spanish level"></nav>
+
+      <article class="lesson-card" aria-labelledby="level-title">
+        <div class="card-topline">
+          <span class="level-label" id="level-label">LEVEL 1 · A1 BEGINNER</span>
+          <span class="lesson-time">✳ &nbsp;Course curriculum</span>
+        </div>
+        <h3 id="level-title"></h3>
+        <p class="lesson-intro" id="level-intro"></p>
+        <ul class="topic-list" id="lesson-content"></ul>
+        <p class="topic-hint">Choose any topic to open a mini-lesson.</p>
+        <article class="topic-detail" id="topic-detail" aria-live="polite" hidden>
+          <div class="topic-detail-copy">
+            <p class="eyebrow">A QUICK LOOK</p>
+            <h4 id="topic-detail-title"></h4>
+            <p id="topic-detail-note"></p>
+            <div class="topic-example">
+              <div>
+                <strong id="topic-example-spanish" lang="es"></strong>
+                <span id="topic-example-english"></span>
+              </div>
+              <button class="topic-audio" id="topic-audio" type="button" aria-label="Hear this Spanish example">🔊 <span>Listen</span></button>
+            </div>
+          </div>
+        </article>
+        <section class="speaking-practice" aria-labelledby="speaking-title">
+          <div class="speaking-heading">
+            <div>
+              <p class="eyebrow">LISTEN &amp; SAY IT</p>
+              <h4 id="speaking-title">Practice with Lola</h4>
+            </div>
+            <span class="speech-badge">Spanish audio · ES</span>
+          </div>
+          <div class="speaking-layout">
+            <div class="coach-character" id="coach-character">
+              <svg class="coach-avatar" viewBox="0 0 120 130" role="img" aria-labelledby="coach-avatar-title">
+                <title id="coach-avatar-title">Lola the axolotl, your Spanish speaking buddy</title>
+                <path class="coach-gill" d="M29 52C13 39 13 28 17 20c13 4 20 14 19 29M34 59C17 55 9 47 7 39c13-1 24 6 30 16M91 52c16-13 16-24 12-32-13 4-20 14-19 29M86 59c17-4 25-12 27-20-13-1-24 6-30 16"/>
+                <path class="coach-body" d="M27 81c0-22 14-37 33-37s33 15 33 37c0 25-14 40-33 40S27 106 27 81Z"/>
+                <ellipse class="coach-cheek" cx="42" cy="79" rx="8" ry="5"/>
+                <ellipse class="coach-cheek" cx="78" cy="79" rx="8" ry="5"/>
+                <ellipse class="coach-eye" cx="47" cy="69" rx="3" ry="4"/>
+                <ellipse class="coach-eye" cx="73" cy="69" rx="3" ry="4"/>
+                <path class="coach-mouth" d="M53 82q7 8 14 0"/>
+                <path class="coach-belly" d="M44 97q16-10 32 0v9q-16 10-32 0z"/>
+              </svg>
+              <span class="coach-name">Lola</span>
+            </div>
+            <div class="speaking-content">
+              <p class="coach-message" id="coach-message" role="status" aria-live="polite">¡Hola! Tap a speaker, listen closely, then say it with me.</p>
+              <div class="phrase-list" id="phrase-list"></div>
+              <p class="voice-note" id="voice-note">Lola uses your browser’s voice. Install a Spanish speech voice for the most natural pronunciation.</p>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <section class="translator-card" id="translator" aria-labelledby="translator-title">
+        <div class="translator-heading">
+          <div class="translator-icon" aria-hidden="true">文</div>
+          <div>
+            <p class="eyebrow">YOUR POCKET DICTIONARY</p>
+            <h3 id="translator-title">Translate a word or phrase</h3>
+          </div>
+        </div>
+        <p class="translator-intro">Look up Spanish and English words and phrases from your course. This translator works offline with the course glossary.</p>
+        <form id="translator-form">
+          <label class="direction-label" for="translator-direction">Translation direction</label>
+          <select class="direction-select" id="translator-direction">
+            <option value="es-en">Spanish → English</option>
+            <option value="en-es">English → Spanish</option>
+          </select>
+          <label class="direction-label" for="translator-input">Word or phrase</label>
+          <div class="translator-input-row">
+            <input id="translator-input" type="text" autocomplete="off" placeholder="Try hola, buenos días, or me llamo Ana" required>
+            <button class="translate-button" type="submit">Translate <span aria-hidden="true">→</span></button>
+          </div>
+        </form>
+        <div class="translator-result" id="translator-result" role="status" aria-live="polite" hidden></div>
+      </section>
+
+      <section class="exam-card" id="exam" aria-labelledby="exam-title">
+        <div class="exam-heading">
+          <div class="exam-icon" aria-hidden="true">✎</div>
+          <div><p class="eyebrow">ALL SIX LEVELS · 60 QUESTIONS</p><h3 id="exam-title">Spanish placement exam</h3></div>
+        </div>
+        <p class="exam-intro">Answer all 60 multiple-choice questions. Your grade and the correct answers are revealed only after you submit.</p>
+        <form id="exam-form">
+          <div id="questions"></div>
+          <button class="submit-button" id="submit-exam" type="submit">Submit all 60 answers <span aria-hidden="true">→</span></button>
+        </form>
+        <div class="exam-result" id="exam-result" role="status" aria-live="polite" hidden></div>
+      </section>
+    </section>
+    <footer class="footer"><span>Hecho con cariño <span aria-hidden="true">♥</span></span><span>One word at a time.</span></footer>
+  </main>
+</body>
+</html>
